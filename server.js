@@ -12,6 +12,13 @@ app.get('/article-one',function(req, res){
     res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
 });
 
+var count=0;
+app.get('/counter', function(req,res){
+    count=count+1;
+    res.send(count.toString());
+});
+
+
 app.get('/article-two',function(req, res){
     res.send("the article two requested");
 });
